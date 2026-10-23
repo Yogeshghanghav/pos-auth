@@ -1,0 +1,35 @@
+
+> pos-server@1.0.0 test
+> jest --coverage --runInBand --forceExit
+
+(node:282) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+PASS src/tests/auth.test.js (17.132 s)
+PASS src/tests/users.test.js (13.578 s)
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |   93.45 |    71.18 |    91.3 |   96.68 |                   
+ src                |   95.83 |      100 |       0 |     100 |                   
+  app.js            |   95.83 |      100 |       0 |     100 |                   
+ src/controllers    |   94.54 |    72.97 |     100 |      96 |                   
+  authController.js |     100 |      100 |     100 |     100 |                   
+  userController.js |   91.42 |    65.51 |     100 |   93.75 | 35-36             
+ src/middleware     |   83.33 |    66.66 |     100 |   89.28 |                   
+  auth.js           |     100 |      100 |     100 |     100 |                   
+  errorHandler.js   |      40 |       25 |     100 |      50 | 5-7               
+  validate.js       |     100 |      100 |     100 |     100 |                   
+ src/models         |     100 |      100 |     100 |     100 |                   
+  User.js           |     100 |      100 |     100 |     100 |                   
+ src/routes         |   97.36 |       50 |   66.66 |     100 |                   
+  authRoutes.js     |     100 |       50 |     100 |     100 | 10                
+  posRoutes.js      |     100 |      100 |     100 |     100 |                   
+  userRoutes.js     |   94.73 |      100 |       0 |     100 |                   
+--------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       21 passed, 21 total
+Snapshots:   0 total
+Time:        30.928 s
+Ran all test suites.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
